@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  <!-- Specify the character encoding for the document (Hira Choudhry) -->
+    <title>Sign Up</title>  <!-- Set the title of the document (Hira Choudhay) -->
+</head>
+<body>
+    <h1>Sign Up</h1>  <!-- Page heading (Hira Choudhry) -->
+    <form method="post" action="{{ url_for('signup') }}">  <!-- Start the form with POST method and action pointing to the signup route (Hira Choudhry) -->
+        {{ form.hidden_tag() }}  <!-- Include hidden fields for CSRF protection (Hira Choudhry) -->
+        <div>
+            {{ form.first_name.label }}<br>  <!-- Render the first name label (Hira Choudhry) -->
+            {{ form.first_name(size=32) }}<br>  <!-- Render the first name input field with size attribute (Hira Choudhry) -->
+            {% for error in form.first_name.errors %}  <!-- Loop through the first name field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.last_name.label }}<br>  <!-- Render the last name label (Hira Choudhry) -->
+            {{ form.last_name(size=32) }}<br>  <!-- Render the last name input field with size attribute (Hira Choudhry) -->
+            {% for error in form.last_name.errors %}  <!-- Loop through the last name field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.username.label }}<br>  <!-- Render the username label (Hira Choudhry) -->
+            {{ form.username(size=32) }}<br>  <!-- Render the username input field with size attribute (Hira Choudhry) -->
+            {% for error in form.username.errors %}  <!-- Loop through the username field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.email.label }}<br>  <!-- Render the email label (Hira Choudhry) -->
+            {{ form.email(size=32) }}<br>  <!-- Render the email input field with size attribute (Hira Choudhry) -->
+            {% for error in form.email.errors %}  <!-- Loop through the email field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.phone.label }}<br>  <!-- Render the phone label (Hira Choudhry) -->
+            {{ form.phone(size=32) }}<br>  <!-- Render the phone input field with size attribute (Hira Choudhry) -->
+            {% for error in form.phone.errors %}  <!-- Loop through the phone field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.password.label }}<br>  <!-- Render the password label (Hira Choudhry) -->
+            {{ form.password(size=32) }}<br>  <!-- Render the password input field with size attribute (Hira Choudhry) -->
+            {% for error in form.password.errors %}  <!-- Loop through the password field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.confirm_password.label }}<br>  <!-- Render the confirm password label (Hira Choudhry) -->
+            {{ form.confirm_password(size=32) }}<br>  <!-- Render the confirm password input field with size attribute (Hira Choudhry) -->
+            {% for error in form.confirm_password.errors %}  <!-- Loop through the confirm password field errors (Hira Choudhry) -->
+                <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.submit() }}  <!-- Render the submit button (Hira Choudhry) -->
+        </div>
+    </form>
+</body>
+</html>

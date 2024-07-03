@@ -1,0 +1,25 @@
+<!-- app/templates/login.html (Hira Choudhry) -->
+
+{% extends "base.html" %}  <!-- Extend the base template (Hira Choudhry) -->
+{% block content %}  <!-- Define the content block (Hira Choudhry) -->
+<h1>Sign In</h1>  <!-- Page heading (Hira Choudhry) -->
+<form method="post">  <!-- Start the form with POST method (Hira Choudhry) -->
+    {{ form.hidden_tag() }}  <!-- Include hidden fields for CSRF protection (Hira Choudhry) -->
+    <p>
+        {{ form.username.label }}<br>  <!-- Render the username label (Hira Choudhry) -->
+        {{ form.username(size=32) }}<br>  <!-- Render the username input field with size attribute (Hira Choudhry) -->
+        {% for error in form.username.errors %}  <!-- Loop through the username field errors (Hira Choudhry) -->
+            <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.password.label }}<br>  <!-- Render the password label (Hira Choudhry) -->
+        {{ form.password(size=32) }}<br>  <!-- Render the password input field with size attribute (Hira Choudhry) -->
+        {% for error in form.password.errors %}  <!-- Loop through the password field errors (Hira Choudhry) -->
+            <span style="color: red;">[{{ error }}]</span>  <!-- Display each error in red (Hira Choudhry) -->
+        {% endfor %}
+    </p>
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>  <!-- Render the remember me checkbox and label (Hira Choudhry) -->
+    <p>{{ form.submit() }}</p>  <!-- Render the submit button (Hira Choudhry) -->
+</form>
+{% endblock %}  <!-- End of the content block (Hira Choudhry) -->

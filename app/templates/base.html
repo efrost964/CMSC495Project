@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  <!-- Specify the character encoding for the document (Hira Choudhry) -->
+    <title>{% block title %}{% endblock %}</title>  <!-- Define the title block for child templates to override (Hira Choudhry) -->
+</head>
+<body>
+    <header>
+        <h1>Car Rental App</h1>  <!-- Main heading for the application (Hira Choudhry) -->
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('welcome') }}">Home</a></li>  <!-- Navigation link to the welcome page (Hira Choudhry) -->
+                {% if current_user.is_authenticated %}  <!-- Check if the user is authenticated (Hira Choudhry) -->
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>  <!-- Display logout link if authenticated (Hira Choudhry) -->
+                {% else %}
+                    <li><a href="{{ url_for('login') }}">Login</a></li>  <!-- Display login link if not authenticated (Hira Choudhry) -->
+                    <li><a href="{{ url_for('signup') }}">Sign Up</a></li>  <!-- Display signup link if not authenticated (Hira Choudhry) -->
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}  <!-- Define the content block for child templates to override (Hira Choudhry) -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Car Rental App</p>  <!-- Footer with copyright information (Hira Choudhry) -->
+    </footer>
+</body>
+</html>

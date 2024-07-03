@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">  <!-- Specify the character encoding for the document (Hira Choudhry) -->
+    <title>Welcome</title>  <!-- Set the title of the document (Hira Choudhry) -->
+</head>
+<body>
+    <h1>Welcome to Car Rental, {{ current_user.username }}!</h1>  <!-- Display a welcome message with the current user's username (Hira Choudhry) -->
+    <a href="{{ url_for('logout') }}">Logout</a>  <!-- Provide a logout link (Hira Choudhry) -->
+</body>
+</html>

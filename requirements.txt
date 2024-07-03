@@ -1,0 +1,8 @@
+Flask==2.0.3  # Web framework for building web applications (Hira Choudhry)
+Werkzeug==2.0.3  # WSGI utility library for Python (Hira Choudhry)
+Flask-WTF==0.15.1  # Integration of Flask and WTForms (Hira Choudhry)
+Flask-SQLAlchemy==2.5.1  # Adds SQLAlchemy support to Flask (Hira Choudhry)
+SQLAlchemy==1.4.22  # SQL toolkit and Object-Relational Mapping (ORM) library (Hira Choudhry)
+Flask-Login==0.5.0  # User session management for Flask (Hira Choudhry)
+email-validator  # Email validation library (Hira Choudhry)
+Flask-Migrate  # Database migration tool for Flask applications using SQLAlchemy (Hira Choudhry)
